@@ -50,10 +50,35 @@
             margin-top: 10px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         .pub-title {
             font-weight: 600;
+            font-size: 1rem;
+        }
+        .star-icon {
+            color: #f5b042;
+            font-size: 1.1rem;
+            margin-right: 4px;
+            display: inline-block;
+        }
+        .authors {
+            font-size: 0.92rem;
+            color: #2c3e50;
+            margin: 0.15rem 0 0.2rem 0;
+        }
+        .venue {
+            font-size: 0.88rem;
+            color: #4a627a;
+        }
+        .venue em {
+            font-style: italic;
+            color: #2c5a7a;
+        }
+        /* 作者加粗样式：保持可读性，无背景仅深色粗体 */
+        strong {
+            font-weight: 700;
+            color: #b94b1f;
         }
         .footer {
             margin-top: 50px;
@@ -63,12 +88,11 @@
         }
     </style>
 </head>
-
 <body>
 
 <!-- ================= Header ================= -->
 <div class="header">
-    <img src="assets/photo.jpg" alt="Qihang Guo" class="photo">
+    <img src="assets/photo.png" alt="Qihang Guo" class="photo" onerror="this.style.display='none'">
     <div class="info">
         <h1>Qihang Guo</h1>
         <p>Zhenjiang, Jiangsu, China</p>
@@ -84,9 +108,9 @@
 <!-- ================= Biography ================= -->
 <h2>Biography</h2>
 <p>
-    I am a Ph.D. at Jiangsu University of Science and Technology.
-    My research interests lie in graph neural networks, trustworthy AI
-    , and their applications in real-world complex systems.
+    I am a Ph.D. candidate at Jiangsu University of Science and Technology.
+    My research interests lie in graph neural networks, trustworthy AI,
+    and their applications in real-world complex systems.
 </p>
 
 <!-- ================= Education ================= -->
@@ -111,74 +135,111 @@
 
 <!-- ================= Publications ================= -->
 <h2>Publications</h2>
-<ul>
+<ul class="publications-list">
+    <!-- Mian -->
     <li>
-        <span class="pub-title">VQIT-GNN: A collaborative knowledge transfer for node-level structure imbalance</span><br>
-        <em>Pattern Recognition</em>, 2026.
-        <br>
-        DOI: <a href="https://doi.org/10.1016/J.PATCOG.2025.112632" target="_blank">
-            10.1016/J.PATCOG.2025.112632
-        </a>
+        <div class="pub-title">
+            <span class="star-icon">★</span> Cross-graph interaction networks
+        </div>
+        <div class="authors"><strong>Q Guo</strong>, X Yang, W Ding, Y Qian</div>
+        <div class="venue"><em>IEEE Transactions on Knowledge and Data Engineering</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">
+            <span class="star-icon">★</span> Controllable Exploration-Exploitation in User-Item Interactions Toward Long-Term Recommendation Gains: A Pane-Aware Graph Transformer Architecture
+        </div>
+        <div class="authors"><strong>Q Guo</strong>, X Yang, K Liu, W Ding, Y Qian</div>
+        <div class="venue"><em>IEEE Transactions on Knowledge and Data Engineering</em>, 2026</div>
+    </li>
+    <li>
+        <div class="pub-title">
+            <span class="star-icon">★</span> Collaborative graph neural networks for augmented graphs: A local-to-global perspective
+        </div>
+        <div class="authors"><strong>Q Guo</strong>, X Yang, M Li, Y Qian</div>
+        <div class="venue"><em>Pattern Recognition</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">
+            <span class="star-icon">★</span> Perturbation-augmented graph convolutional networks: A graph contrastive learning architecture for effective node classification tasks
+        </div>
+        <div class="authors"><strong>Q Guo</strong>, X Yang, F Zhang, T Xu</div>
+        <div class="venue"><em>Engineering Applications of Artificial Intelligence</em>, 2024</div>
+    </li>
+    <li>
+        <div class="pub-title">
+            <span class="star-icon">★</span> Fuzzy feature factorization machine: Bridging feature interaction, selection, and construction
+        </div>
+        <div class="authors"><strong>Q Guo</strong>, K Liu, T Xu, P Wang, X Yang</div>
+        <div class="venue"><em>Expert Systems with Applications</em>, 2024</div>
     </li>
 
+    <!-- ================= 2024-2026 Others ================= -->
+    <!-- 2026 -->
     <li>
-        <span class="pub-title">Hierarchical decoupling from global-to-structural dependency for unsupervised graph representation learning on noisy graphs</span><br>
-        <em>Knowledge-Based Systems</em>, 2026.
-        <br>
-        DOI: <a href="https://doi.org/10.1016/j.knosys.2025.115146" target="_blank">
-            10.1016/j.knosys.2025.115146
-        </a>
+        <div class="pub-title">VQIT-GNN: A collaborative knowledge transfer for node-level structure imbalance</div>
+        <div class="authors">W Guan, X Yang, M Li, <strong>Q Guo</strong>, K Liu, Q Sun</div>
+        <div class="venue"><em>Pattern Recognition</em>, 2026</div>
+    </li>
+    <li>
+        <div class="pub-title">Hierarchical decoupling from global-to-structural dependency for unsupervised graph representation learning on noisy graphs</div>
+        <div class="authors"><strong>Q Guo</strong>, K Liu, W Guan, X Yang, Q Sun, T Huang</div>
+        <div class="venue"><em>Knowledge-Based Systems</em>, 2026</div>
+    </li>
+    <li>
+        <div class="pub-title">Extending graph neural networks to edge-level neighborhood awareness via line graph.</div>
+        <div class="authors">Y Guo, W Guan, <strong>Q Guo</strong>, Y Wang, K Liu, X Yang</div>
+        <div class="venue"><em>Electronic Research Archive</em>, 2026</div>
+    </li>
+    <li>
+        <div class="pub-title">Semi-supervised teaching graph contrastive network for node classification</div>
+        <div class="authors">C Shen, J Song, Q Sun, <strong>Q Guo</strong>, ECC Tsang</div>
+        <div class="venue"><em>Electronic Research Archive</em>, 2026</div>
     </li>
 
+    <!-- 2025 -->
     <li>
-        <span class="pub-title">Collaborative graph neural networks for augmented graphs: A local-to-global perspective</span><br>
-        <em>Pattern Recognition</em>, 2025.
+        <div class="pub-title">Robust graph mutual-assistance convolutional networks for semi-supervised node classification tasks</div>
+        <div class="authors"><strong>Q Guo</strong>, X Yang, W Guan, K Ma, Y Qian</div>
+        <div class="venue"><em>Information Sciences</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">UMGCN: Updating multi-graph for graph convolutional networks</div>
+        <div class="authors">G Zhu, K Liu, X Yang, <strong>Q Guo</strong></div>
+        <div class="venue"><em>Computers & Electrical Engineering</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">A multi-hop Shapley-based framework for graph convolutional network node classification explanation</div>
+        <div class="authors">Y Zheng, X Yang, Q Sun, K Liu, <strong>Q Guo</strong></div>
+        <div class="venue"><em>Applied Soft Computing</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">Feature-topology cascade perturbation for graph neural network</div>
+        <div class="authors">H Cong, X Yang, K Liu, <strong>Q Guo</strong></div>
+        <div class="venue"><em>Engineering Applications of Artificial Intelligence</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">Less for Better: A View Filter-Driven Graph Representation Fusion Network</div>
+        <div class="authors">Y Wang, X Yang, K Liu, <strong>Q Guo</strong>, X Wang</div>
+        <div class="venue"><em>Entropy</em>, 2025</div>
+    </li>
+    <li>
+        <div class="pub-title">Graph Neural Networks with Direct Reach to Labeled Nodes</div>
+        <div class="authors">Q Teng, <strong>Q Guo</strong>, X Yang, K Liu, T Li</div>
+        <div class="venue"><em>International Joint Conference on Rough Sets</em>, 2025</div>
     </li>
 
+    <!-- 2024-->
     <li>
-        <span class="pub-title">Cross-Graph Interaction Networks</span><br>
-        <em>IEEE Transactions on Knowledge and Data Engineering</em>, 2025.
-    </li>
-
-    <li>
-        <span class="pub-title">Robust graph mutual-assistance convolutional networks for semi-supervised node classification tasks</span><br>
-        <em>Information Sciences</em>, 2025.
-    </li>
-
-    <li>
-        <span class="pub-title">UMGCN: Updating multi-graph for graph convolutional networks</span><br>
-        <em>Computers & Electrical Engineering</em>, 2025.
-    </li>
-
-    <li>
-        <span class="pub-title">A multi-hop Shapley-based framework for graph convolutional network node classification explanation</span><br>
-        <em>Applied Soft Computing</em>, 2025.
-    </li>
-
-    <li>
-        <span class="pub-title">Feature-topology cascade perturbation for graph neural network</span><br>
-        <em>Engineering Applications of Artificial Intelligence</em>, 2025.
-    </li>
-
-    <li>
-        <span class="pub-title">Perturbation-augmented Graph Convolutional Networks</span><br>
-        <em>Engineering Applications of Artificial Intelligence</em>, 2024.
-    </li>
-
-    <li>
-        <span class="pub-title">Purity Skeleton Dynamic Hypergraph Neural Network</span><br>
-        <em>Neurocomputing</em>, 2024.
-    </li>
-
-    <li>
-        <span class="pub-title">Fuzzy feature factorization machine: Bridging feature interaction, selection, and construction</span><br>
-        <em>Expert Systems with Applications</em>, 2024.
+        <div class="pub-title">Purity skeleton dynamic hypergraph neural network</div>
+        <div class="authors">Y Wang, X Yang, Q Sun, Y Qian, <strong>Q Guo</strong></div>
+        <div class="venue"><em>Neurocomputing</em>, 2024</div>
     </li>
     <li>
         <strong>...</strong><br>
     </li>
 </ul>
 
+<!-- ================= Peer Review Service ================= -->
 <h2>Peer Review Service</h2>
 <ul>
     <li>
@@ -205,7 +266,6 @@
         <strong>...</strong><br>
     </li>
 </ul>
-
 
 <!-- ================= Footer ================= -->
 <div class="footer">
